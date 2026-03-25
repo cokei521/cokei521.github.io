@@ -9,7 +9,7 @@ const dockerServices = [
     {
         name: '自建镜像',
         url: 'https://dockerhub.85604608.xyz',
-        provider: '阿里云',
+        provider: '新加坡',
         description: '新加坡容器镜像服务'
     },
     {
