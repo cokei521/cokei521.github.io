@@ -7,10 +7,10 @@ const dockerServices = [
         description: '中国科学技术大学开源软件镜像站'
     },
     {
-        name: '阿里云镜像',
-        url: 'https://registry.cn-hangzhou.aliyuncs.com',
+        name: '自建镜像',
+        url: 'https://dockerhub.85604608.xyz',
         provider: '阿里云',
-        description: '阿里云容器镜像服务'
+        description: '新加坡容器镜像服务'
     },
     {
         name: '腾讯云镜像',
