@@ -7,8 +7,8 @@ const dockerServices = [
         description: '中国科学技术大学开源软件镜像站'
     },
     {
-        name: '自建镜像',
-        url: 'https://dockerhub.85604608.xyz',
+        name: 'cokei521专用镜像',
+        url: 'https://docker.cokei521.top',
         provider: '新加坡',
         description: '新加坡容器镜像服务'
     },
