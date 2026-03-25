@@ -9,7 +9,7 @@ const dockerServices = [
     {
         name: 'cokei521专用镜像',
         url: 'https://docker.cokei521.top',
-        provider: '新加坡',
+        provider: 'cokei521专用镜像',
         description: '新加坡容器镜像服务'
     },
     {
