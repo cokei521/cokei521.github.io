@@ -12,6 +12,12 @@ const dockerServices = [
         provider: 'cokei521专用镜像',
         description: '新加坡容器镜像服务'
     },
+	  {
+        name: 'cokei521香港镜像',
+        url: 'https://docker.081011.xyz',
+        provider: 'cokei521香港镜像',
+        description: '香港容器镜像服务'
+    },
     {
         name: '腾讯云镜像',
         url: 'https://mirror.ccs.tencentyun.com',
