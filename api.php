@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 $dockerServices = [
     ['name' => '中科大镜像站', 'url' => 'https://docker.mirrors.ustc.edu.cn', 'provider' => 'USTC'],
     ['name' => 'cokei521专用镜像', 'url' => 'https://docker.cokei521.top', 'provider' => 'cokei521专用镜像'],
+     ['name' => 'cokei521香港镜像', 'url' => 'https://docker.cokei521.top', 'provider' => 'cokei521香港镜像'],
     ['name' => '腾讯云镜像', 'url' => 'https://mirror.ccs.tencentyun.com', 'provider' => '腾讯云'],
     ['name' => '华为云镜像', 'url' => 'https://swr.cn-north-1.myhuaweicloud.com', 'provider' => '华为云'],
     ['name' => '上海交大镜像', 'url' => 'https://docker.mirrors.sjtug.sjtu.edu.cn', 'provider' => '上海交大'],
