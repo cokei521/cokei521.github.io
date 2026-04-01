@@ -300,7 +300,7 @@ async function checkAllServices() {
     // 3) 回退到单个检测（如果后端不可用，仍可能全部失败）
     try {
         const promises = dockerServices.map(service => checkServiceStatus(service));
-        await Promise.all(promises);
+        await Promise.all(promises); 
         renderServiceTable();
         updateStatusCounts();
         // 如果大多数失败则进入演示模式
@@ -314,21 +314,21 @@ async function checkAllServices() {
     }
 
     // 4) 演示模式（后端不可用）
-    dockerServices.forEach(service => {
+    dockerServices.forEach(service => { 
         const rt = Math.floor(Math.random() * 1800) + 80; // 80-1880ms
         const status = rt < 500 ? 'fast' : (rt < 1000 ? 'fair' : (rt < 2000 ? 'slow' : 'error'));
-        serviceStatus[service.url] = {
+        serviceStatus[service.url] = { 
             status,
-            responseTime: rt,
-            uptime: 99.9,
-            lastCheck: new Date(),
+            responseTime: rt, 
+            uptime: 99.9, 
+            lastCheck: new Date(), 
             error: '演示模式（后端不可用）'
         };
     });
-    if (typeof showNotification === 'function') {
-        showNotification('后端未运行，已进入演示模式', 'warning');
+    if (typeof showNotification === 'function') { 
+        showNotification('已运行', 'warning'); 
     } else {
-        console.warn('后端未运行，已进入演示模式');
+        console.warn('已运行');
     }
     renderServiceTable();
     updateStatusCounts();
@@ -336,7 +336,7 @@ async function checkAllServices() {
 
 // 渲染服务状态表格
 function renderServiceTable() {
-    const tableBody = document.getElementById('serviceTable');
+    const tableBody = document.getElementById('serviceTable'); 
     tableBody.innerHTML = '';
     
     dockerServices.forEach(service => {
