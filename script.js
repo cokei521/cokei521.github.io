@@ -12,7 +12,7 @@ const dockerServices = [
         provider: 'cokei521专用镜像',
         description: '新加坡容器镜像服务'
     },
-	  {
+	{
         name: 'cokei521香港镜像',
         url: 'https://docker.081011.xyz',
         provider: 'cokei521香港镜像',
@@ -26,7 +26,7 @@ const dockerServices = [
     },
     {
         name: '华为云镜像',
-        url: 'https://swr.cn-north-1.myhuaweicloud.com',
+        url: 'https://swr.cn-north-1.myhuaweicloud.com', 
         provider: '华为云',
         description: '华为云软件开发生产线'
     },
@@ -52,7 +52,7 @@ const dockerServices = [
         name: '1Panel 镜像',
         url: 'https://docker.1panel.live',
         provider: '1Panel',
-        description: '1Panel CloudFlare 镜像源'
+        description: '1Panel CloudFlare 镜像源' 
     },
     {
         name: '耗子面板',
@@ -262,13 +262,13 @@ async function checkAllServices() {
                 if (result.cached) {
                     console.log('使用缓存数据，缓存时间:', result.cache_time);
                 } else {
-                    console.log(`检测完成，耗时: ${result.check_time_ms}ms`);
+                    console.log(`检测完成，耗时: ${result.check_time_ms}ms`);  
                 }
                 return;
             }
         }
     } catch (error) {
-        console.warn('批量API失败，尝试回退 GET /quick_check:', error);
+        console.warn('批量API失败，尝试回退 GET /quick_check:', error);  
     }
 
     // 2) 回退到 GET /quick_check
@@ -326,9 +326,9 @@ async function checkAllServices() {
         };
     });
     if (typeof showNotification === 'function') { 
-        showNotification('已运行', 'warning'); 
+        showNotification('检测完成', 'warning');  
     } else {
-        console.warn('已运行');
+        console.warn('检测完成');
     }
     renderServiceTable();
     updateStatusCounts();
